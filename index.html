@@ -37,6 +37,7 @@
       <!-- Decorative aurora background -->
       <div class="bg-decor" aria-hidden="true">
         <div class="bg-aurora"></div>
+        <div class="bg-dotgrid"></div>
         <div class="bg-grain"></div>
       </div>
 
@@ -77,49 +78,90 @@
           </div>
         </div>
 
-        <!-- App preview mockup -->
+        <!-- App preview — multi-layer realistic mockup -->
         <div class="hero__preview" aria-hidden="true">
           <div class="app-preview">
+            <!-- Floater: New booking notification -->
             <div class="app-preview__floater app-preview__floater--top">
               <span class="app-preview__floater-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
               </span>
-              <span data-i18n="trust.available">متاح 24/7</span>
+              <span class="app-preview__floater-meta">
+                <small data-i18n="preview.floaterBooked">حجز جديد</small>
+                <strong data-i18n="preview.floaterOnline">٢٠٠ طبيب متصل</strong>
+              </span>
             </div>
 
+            <!-- Main app card -->
             <div class="app-preview__card">
-              <div class="app-preview__top">
-                <span data-i18n="header.logoAlt">الحكيم</span>
-                <span class="app-preview__dot" data-i18n="preview.statusLive">متاحة الآن</span>
+              <!-- Chrome: brand + live status -->
+              <div class="app-preview__chrome">
+                <span class="app-preview__brand">
+                  <img src="assets/images/logo.svg" alt="" class="app-preview__brand-mark" />
+                  <span data-i18n="preview.appName">الحكيم</span>
+                </span>
+                <span class="app-preview__live" data-i18n="preview.statusLive">متصل</span>
               </div>
 
-              <div class="app-preview__doctor">
-                <div class="app-preview__avatar">د</div>
-                <div class="app-preview__doctor-meta">
-                  <span class="app-preview__doctor-name" data-i18n="preview.doctorName">د. سارة عبد الله</span>
-                  <span class="app-preview__doctor-spec" data-i18n="preview.doctorSpec">طب باطني · استشارية</span>
-                  <span class="app-preview__rating">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 8.5 22 9.3 17 14 18.2 21 12 17.8 5.8 21 7 14 2 9.3 9 8.5 12 2"/></svg>
-                    <strong data-i18n="preview.rating">٤٫٩</strong>
-                    <span data-i18n="preview.reviews">(١٢٤ تقييم)</span>
-                  </span>
+              <!-- Greeting -->
+              <p class="app-preview__greeting">
+                <span data-i18n="preview.greeting">صباح الخير 👋</span>
+                <strong data-i18n="preview.userName">أحمد</strong>
+              </p>
+
+              <!-- Section label -->
+              <p class="app-preview__label" data-i18n="preview.nextLabel">موعدك القادم</p>
+
+              <!-- Primary card: Next appointment -->
+              <div class="app-preview__appt">
+                <div class="app-preview__appt-row">
+                  <div class="app-preview__avatar">د</div>
+                  <div class="app-preview__doctor-meta">
+                    <span class="app-preview__doctor-name" data-i18n="preview.doctorName">د. سارة عبد الله</span>
+                    <span class="app-preview__doctor-spec" data-i18n="preview.doctorSpec">طب باطني · استشارية</span>
+                    <span class="app-preview__rating">
+                      <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 8.5 22 9.3 17 14 18.2 21 12 17.8 5.8 21 7 14 2 9.3 9 8.5 12 2"/></svg>
+                      <strong data-i18n="preview.rating">٤٫٩</strong>
+                      <span data-i18n="preview.reviews">(١٢٤)</span>
+                    </span>
+                  </div>
+                </div>
+
+                <span class="app-preview__when-pill">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>
+                  <span data-i18n="preview.nextWhen">خلال ٢٠ دقيقة</span>
+                </span>
+
+                <div class="app-preview__cta">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+                  <span data-i18n="preview.cta">ابدأ المكالمة</span>
                 </div>
               </div>
 
-              <div class="app-preview__chips">
-                <span class="app-preview__chip app-preview__chip--brand">طب باطني</span>
-                <span class="app-preview__chip">عربي · English</span>
-                <span class="app-preview__chip">فيديو · صوت</span>
+              <!-- Activity row -->
+              <div class="app-preview__activity">
+                <p class="app-preview__label" data-i18n="preview.activityLabel">نشاط حديث</p>
+                <div class="app-preview__activity-item">
+                  <span class="app-preview__activity-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </span>
+                  <span class="app-preview__activity-text">
+                    <span class="app-preview__activity-title" data-i18n="preview.activityRx">صُرفت وصفتك من صيدلية الشفاء</span>
+                    <span class="app-preview__activity-time" data-i18n="preview.activityRxTime">قبل ٥ دقائق</span>
+                  </span>
+                </div>
               </div>
-
-              <div class="app-preview__cta" data-i18n="preview.cta">حجز استشارة</div>
             </div>
 
-            <div class="app-preview__floater app-preview__floater--bottom">
+            <!-- Floater: Verified -->
+            <div class="app-preview__floater app-preview__floater--bottom app-preview__floater--green">
               <span class="app-preview__floater-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 9.5 8 10 4.5-.5 8-5 8-10V6l-8-4Z"/><path d="m9 12 2 2 4-4"/></svg>
               </span>
-              <span data-i18n="trust.verified">أطباء معتمدون</span>
+              <span class="app-preview__floater-meta">
+                <small data-i18n="preview.floaterVerified">تم التحقق</small>
+                <strong data-i18n="trust.secure">تشفير من طرف لطرف</strong>
+              </span>
             </div>
           </div>
         </div>
