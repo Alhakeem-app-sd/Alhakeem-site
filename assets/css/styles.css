@@ -171,15 +171,6 @@ svg {
   flex-shrink: 0;
 }
 
-@media (max-width: 36rem) {
-  .header-login__label {
-    display: none;
-  }
-  .header-login {
-    padding: var(--space-3);
-  }
-}
-
 /* ---- Lang button ---- */
 .lang-btn {
   display: inline-flex;
