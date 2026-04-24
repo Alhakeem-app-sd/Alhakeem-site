@@ -1,0 +1,218 @@
+/* ============================================================
+   AL-HAKEEM DESIGN SYSTEM — DESIGN TOKENS
+   Source of truth: login-page/src/app/tokens.css
+   Rules: rem only, semantic tokens in components.
+   ============================================================ */
+
+/* ----- Activist Font Family ----- */
+@font-face {
+  font-family: "Activist";
+  src: url("../fonts/activist-light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Activist";
+  src: url("../fonts/activist-regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Activist";
+  src: url("../fonts/activist-semi-bold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Activist";
+  src: url("../fonts/activist-bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  font-size: 16px;
+
+  /* ---- Spacing ---- */
+  --space-0: 0rem;
+  --space-0_5: 0.125rem;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-7: 2rem;
+  --space-8: 2.5rem;
+  --space-9: 3rem;
+  --space-10: 3.5rem;
+  --space-11: 4rem;
+  --space-12: 5rem;
+  --space-13: 6rem;
+  --space-14: 7.5rem;
+  --space-15: 10rem;
+
+  /* ---- Typography ---- */
+  --font-ar-family: "Activist", Arial, sans-serif;
+
+  --type-ar-12: 0.75rem;
+  --type-ar-14: 0.875rem;
+  --type-ar-16: 1rem;
+  --type-ar-18: 1.125rem;
+  --type-ar-22: 1.375rem;
+  --type-ar-24: 1.5rem;
+  --type-ar-28: 1.75rem;
+  --type-ar-32: 2rem;
+  --type-ar-36: 2.25rem;
+  --type-ar-40: 2.5rem;
+  --type-ar-44: 2.75rem;
+  --type-ar-48: 3rem;
+  --type-ar-52: 3.25rem;
+  --type-ar-57: 3.5625rem;
+
+  --line-default: normal;
+  --line-130: 1.3;
+  --tracking-default: 0;
+
+  /* ---- Stroke ---- */
+  --stroke-none: 0rem;
+  --stroke-1: 0.0625rem;
+  --stroke-1_5: 0.09375rem;
+  --stroke-2: 0.125rem;
+  --stroke-4: 0.25rem;
+
+  /* ---- Radius ---- */
+  --radius-0: 0rem;
+  --radius-2: 0.125rem;
+  --radius-4: 0.25rem;
+  --radius-8: 0.5rem;
+
+  /* ---- Opacity ---- */
+  --opacity-0: 0;
+  --opacity-20: 0.2;
+  --opacity-40: 0.4;
+  --opacity-60: 0.6;
+  --opacity-70: 0.7;
+  --opacity-80: 0.8;
+  --opacity-100: 1;
+
+  /* ---- Z-index ---- */
+  --z-base: 0;
+  --z-content: 10;
+  --z-sticky: 20;
+  --z-overlay: 40;
+
+  /* ---- Icon sizes ---- */
+  --icon-size-12: 0.75rem;
+  --icon-size-16: 1rem;
+  --icon-size-20: 1.25rem;
+  --icon-size-24: 1.5rem;
+  --icon-size-28: 1.75rem;
+  --icon-size-32: 2rem;
+  --icon-size-40: 2.5rem;
+  --icon-size-48: 3rem;
+
+  /* ---- Core Colors ---- */
+  --color-blue-50: #eff4ff;
+  --color-blue-100: #dae6ff;
+  --color-blue-200: #bdd4ff;
+  --color-blue-300: #90b8ff;
+  --color-blue-400: #5c93fe;
+  --color-blue-500: #366bfb;
+  --color-blue-600: #234cf0;
+  --color-blue-700: #1836dd;
+  --color-blue-800: #1a2db3;
+  --color-blue-900: #1b2c8d;
+  --color-blue-950: #161d55;
+  --color-blue-1000: #03030a;
+
+  --color-green-50: #e8fff8;
+  --color-green-500: #00dcab;
+  --color-green-600: #00b48d;
+  --color-green-700: #009075;
+  --color-green-950: #00352e;
+
+  --color-pink-50: #fef1fa;
+  --color-pink-500: #f73db5;
+  --color-pink-600: #e71b95;
+
+  --color-cararra-50: #edf0ed;
+  --color-cararra-100: #e1e6e1;
+  --color-cararra-200: #c2cdc3;
+  --color-cararra-800: #333c34;
+  --color-cararra-1000: #080a09;
+
+  --color-blackHaze-50: #f6f7f9;
+  --color-blackHaze-100: #eceef2;
+  --color-blackHaze-200: #d5dbe2;
+  --color-blackHaze-300: #b0bac9;
+  --color-blackHaze-500: #667991;
+  --color-blackHaze-700: #424e62;
+  --color-blackHaze-800: #394353;
+  --color-blackHaze-950: #22272f;
+  --color-blackHaze-1000: #07080a;
+
+  --color-white-50: #ffffff;
+
+  --color-divider-line: #e7eef2;
+  --color-divider-text: #7c9db5;
+
+  /* ---- Semantic ---- */
+  --bg-page: var(--color-cararra-50);
+  --bg-card: var(--color-white-50);
+
+  --text-onPage-primary: var(--color-cararra-1000);
+  --text-onPage-secondary: var(--color-cararra-800);
+  --text-onCard-primary: var(--color-blue-1000);
+  --text-link: var(--color-blue-600);
+
+  --brand-primary: var(--color-blue-600);
+  --brand-primaryText: var(--color-blue-50);
+  --brand-gradient-mid: #e3fff5;
+
+  --border-divider: var(--color-divider-line);
+
+  /* ---- Primary Button ---- */
+  --btn-primary-bg: var(--color-blue-600);
+  --btn-primary-text: var(--color-blue-50);
+  --btn-primary-hover-bg: var(--color-blue-500);
+  --btn-primary-hover-text: var(--color-blue-100);
+  --btn-primary-pressed-bg: var(--color-blue-700);
+
+  --btn-primary-shadow: 0 0.375rem 0.75rem 0 rgba(35, 76, 240, 0.06),
+    0 0.75rem 1.5rem 0 rgba(35, 76, 240, 0.08);
+  --btn-primary-shadow-hover: 0 0.25rem 0.75rem 0 rgba(35, 76, 240, 0.18);
+
+  /* ---- Header / Footer ---- */
+  --header-bg: rgba(255, 255, 255, 0.6);
+  --header-lang-label: var(--color-blue-900);
+  --header-lang-name: var(--color-blue-900);
+  --header-lang-border: var(--color-blue-600);
+
+  /* ---- Layout ---- */
+  --layout-padding-inline: var(--space-15);
+  --content-padding-block: 2.5rem;
+  --card-padding: var(--space-7);
+  --card-width: 23.5rem;
+  --card-gap: var(--space-6);
+}
+
+@media (max-width: 48rem) {
+  :root {
+    --layout-padding-inline: 1.25rem;
+    --content-padding-block: 2rem;
+    --card-padding: 1.25rem;
+    --card-width: 100%;
+    --card-gap: 1.25rem;
+  }
+}
+
+@media (min-width: 1921px) {
+  :root {
+    font-size: 18px;
+  }
+}
